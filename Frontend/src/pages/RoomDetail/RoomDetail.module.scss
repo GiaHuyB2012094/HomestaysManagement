@@ -1,0 +1,296 @@
+$heightDiv: 300px;
+.wrapper {
+    background-color: rgb(241, 251, 251);
+    justify-content: center;
+    flex-direction: column;
+    // padding: 30px 40px;
+}
+.topInner {
+    padding: 40px 170px;
+    .titleRoom {
+        .nameRoom {
+            color: var(--sub);
+        }
+        .branchRoom {
+            color: #858484;
+            padding: 1rem;
+        }
+    }
+    .imageRoom {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        width: 100%;
+
+        .imagePrimary {
+            height: 100%;
+            padding-right: 0.7rem;
+            .image1 {
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px 0 0 10px;
+            }
+        }
+        .imageSub {
+            height: 100%;
+            width: 40%;
+            flex-direction: column;
+            .image2 {
+                padding-bottom: 0.7rem;
+                height: 50%;
+                width: 100%;
+                border-radius: 0 10px 0 0;
+            }
+            .image3 {
+                height: 50%;
+                width: 100%;
+                border-radius: 0 0 10px 0;
+            }
+        }
+        .showMoreImage {
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            .btnShowMoreImage {
+                padding: 8px 20px;
+            }
+        }
+    }
+   
+}
+.acreage-priceRomDiv{
+    align-items: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    width: 100%;
+    .acreageRoom,
+    .priceRoom{
+        // display: flex;
+        // align-items: center;
+        width: 50%;
+        span {
+            
+            display:flex;
+            font-size: 1.8rem;
+            font-weight: bold;
+            h3 {
+                padding-left: 1rem;
+                color: #f45656;
+            }
+        }
+    }
+    .priceRoom{
+        align-items: center;
+        justify-content: flex-end;
+     
+    }
+}
+.bodyRoom {
+    display: flex;
+    width: 100%;
+    .LeftBodyRoom {
+        // min-height: $heightDiv;
+        padding-right: 2rem;
+        width: 75%;
+        .desc-addressRoom {
+            padding: 2rem;
+
+            .titleHomestay {
+                color: var(--sub);
+            }
+            .addressRoom {
+                padding-bottom: 1rem;
+            }
+            .descRoom {
+                height: 180px;
+                overflow: hidden;
+                white-space: pre-wrap;
+                text-overflow: ellipsis;
+            }
+        }
+        .ConvenientDiv {
+            margin: 2rem 0;
+            padding: 2rem 0 0 2rem;
+            // padding: 2rem 2rem 0 10rem;
+            .ConvenientRoom {
+                padding: 0 2rem 2rem 10rem;
+                display: flex;
+                // flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                .convenientItem {
+                    // justify-content: center;
+                    // text-align: center;
+                    flex-direction: row;
+                    padding-bottom: 4px;
+                    padding-right: 8px;
+                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    // padding-right: 5rem;
+                    h5 {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+        .advertisement {
+            padding: 2rem;
+            display: flex;
+            .imgTimeAdvertisement {
+                padding-right: 2rem;
+            }
+            .textAdvertisement {
+                h3,
+                span {
+                    color: rgb(240, 87, 0);
+                }
+            }
+        }
+    }
+
+    .RightBodyRoom {
+        // min-height: $heightDiv;
+
+        width: 25%;
+        // margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        // height:
+        .MyMap {
+            // padding-bottom: 1rem;
+            border-radius: 4px;
+            // display: -webkit-box;
+            // display: -ms-flexbox;
+            display: flex;
+            // height: 95px;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            position: relative;
+            .MapCompact-Overlay {
+                border-radius: 1px;
+                display: table;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 1;
+                .MyMap-SeeMore {
+                    display: table;
+                    font-size: 14px;
+                    font-stretch: normal;
+                    font-style: normal;
+                    font-weight: 700;
+                    height: 24px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: center;
+                    text-transform: uppercase;
+                    top: calc(100% - 24px);
+                    // -webkit-transition: color 0.25s ease-in-out;
+                    transition: color 0.25s ease-in-out;
+                    width: 100%;
+                }
+            }
+            .imgMyMap {
+            }
+        }
+        .nearbyTouristSpotDiv {
+            height: 360px;
+           
+            .nearbyTouristSpot {
+                height: 320px;
+                overflow: hidden;
+                // white-space: pre-wrap;
+                // text-overflow: ellipsis;
+                .spotItem {
+                    // height: 20px;
+                    font-size: 15px;
+                    display: flex;
+                    // justify-content: space-around;
+                    // align-items: center;
+                    .nameSpot {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        .paymentDiv {
+            .btnPayment {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.advertisement,
+.acreage-priceRomDiv,
+.desc-addressRoom,
+.RightBodyRoom,
+.ConvenientDiv {
+    border-radius: 6px;
+    border: 1px solid #dadada;
+    box-shadow: 0 2px 8px rgba(104, 104, 104, 0.3);
+}
+
+.descRoom,
+.nearbyTouristSpotDiv,
+.paymentDiv {
+    padding-top: 1rem;
+    border-top: 1px solid #dadada;
+}
+.contentShowImage {
+    position: relative;
+}
+.showImages {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .imagesRoom {
+        padding: 1rem 0;
+        .images {
+            width: 800px;
+            border-radius: 4px;
+        }
+    }
+}
+.closeShowMoreDiv {
+    position: fixed;
+    top: 15rem;
+    right: 5rem;
+    .btnCloseShowMoreImage {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 20px;
+    }
+}
+.bg-black {
+    background-color: var(--black);
+}
+.text-white {
+    color: white !important;
+}
+.locationRoom{
+    align-items: center;
+    // margin: 2rem 0;
+    padding: 2rem;
+    width: 100%;
+
+    border-radius: 6px;
+    border: 1px solid #dadada;
+    box-shadow: 0 2px 8px rgba(104, 104, 104, 0.3);
+}
+
+
+.bottomInner{
+    .locationTop{
+        margin: 2rem 0;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 8px rgba(104, 104, 104, 0.3);
+        
+    }
+}

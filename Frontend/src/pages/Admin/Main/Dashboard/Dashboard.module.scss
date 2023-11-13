@@ -1,0 +1,31 @@
+.inner{
+    display: flex;
+}
+.right{
+    border-left: 1px solid #c1c1c1;
+    min-height: 706px;
+    width: 100%;
+}
+.btnUpdate{
+    margin-right:2rem;
+}
+.title{
+    align-items: center;
+    justify-content: space-between;
+    color: var(--sub);
+    padding: 2rem 0 0 2rem;
+}
+.dashboard{
+    flex: 6;
+    .widgets, .charts{
+        padding: 20px;
+        gap:20px;
+    }
+    .charts{
+        // background-color: #f1eeff;
+        min-height: 300px;
+        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+    }
+}

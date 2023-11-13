@@ -1,0 +1,238 @@
+.wrapper {
+    justify-content: center;
+    flex-direction: column;
+    // align-items: center;
+    // padding: 30px 40px;
+    background-color: azure;
+}
+.title {
+    padding: 1.7rem 0;
+    color: var(--sub);
+    margin: .5rem 0;
+    z-index: 2;
+    text-align: center;
+}
+.infoErorr{
+    padding: 0 0 3rem 0;
+    justify-content: center;
+    color: #ef4e4e;
+    h3{
+        padding-left: 1rem;
+        color:#ef4e4e;
+    }
+}
+.bannerAdvertisement{
+    width: 100%;
+    height: 800px;
+    .imgBannerAdv{
+        width: 100%;
+        height: 100%;
+    }
+}
+.seeBranch{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    p{
+        text-align: center;
+        color: var(--sub);
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+.imageRoom {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+    // padding: 6rem 0;
+    padding-bottom: 6rem;
+    margin: 0 auto;
+    .imagePrimary {
+        height: 100%;
+        padding-right: 0.7rem;
+        .image1 {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 0 0 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .img1Branch{
+            // height: 50%;
+            position: relative;
+            p{
+                background-color: #f8feff4a;
+                right:0;
+                // top:0;
+                text-align: start;
+                position: absolute;
+                padding: 1rem;
+                left: 0%;
+                bottom: -20%;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #333;
+            }
+        }
+    }
+    .imageSub {
+        height: 100%;
+        width: 40%;
+        flex-direction: column;
+        .img2Branch{
+            height: 50%;
+            position: relative;
+            p{
+                background-color: rgba(224, 248, 208, 0.29);
+                right:0;
+                text-align: start;
+                position: absolute;
+                padding: 1rem;
+                left: 0%;
+                top: 0%;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #333;
+            }
+            .image2{
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                
+            }
+        }
+        .img3Branch{
+            height: 50%;
+            position: relative;
+            p{
+                background-color: rgba(76, 228, 255, 0.29);
+                right:0;
+                text-align: start;
+                position: absolute;
+                padding: 1rem;
+                left: 0%;
+                bottom: -5%;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #333;
+            }
+            .image3{
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+        }
+        .image2 {
+            padding-bottom: 0.7rem;
+            height: 100%;
+            width: 100%;
+            border-radius: 0 10px 0 0;
+        }
+        .image3 {
+            height: 100%;
+            width: 100%;
+            border-radius: 0 0 10px 0;
+        }
+    }
+
+}
+
+.whychooseusDiv{
+    width: 100%;
+    background-color:#f0ffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
+    .reasonDiv{
+        padding: 1rem 4rem;  
+        margin: 0 auto;
+        text-align: center;
+        width: 33%;
+        .img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+.bestFeatureDiv{
+    padding:6rem;
+    // margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    .Left-bestFeatureDiv{
+        width: 50%;
+        .body-BestFeatures{
+            width: 90%;
+            .featureBox{
+                padding: 2rem;
+                .iconFeatureBox{
+                 padding: 1.2rem;
+                 height: 50px;
+                 border-radius: 4px;
+                 
+                }
+                .feature-group{
+                    color:#333;
+                    padding: 0 1rem;
+                    margin: 0 2rem;
+                }
+                &:hover{
+                    background-color: #eceff1;
+                    // padding: .5rem;
+                    padding: 2.5rem;
+                    cursor: pointer;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    .right-FeatureDiv{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .imgFeatureBox{
+            
+            .top-right-FeatureDiv{
+                .imgFeature1{
+                    border-radius: 0 50px 0 50px;
+                    margin-right: .5rem;
+                }
+                .imgFeature2{
+                    border-radius: 50px 0 50px 0 ;
+                }
+                margin-bottom: .5rem;
+            }
+           .bot-right-FeatureDiv{
+            
+                .imgFeature3{
+                    border-radius: 50px 0 50px 0 ;
+                    margin-right: .5rem;
+                }
+                .imgFeature4{
+                    border-radius: 0 50px 0 50px;
+                }
+           }
+        }
+        
+    }
+}
+.imgFeature1,
+.imgFeature2,
+.imgFeature3,
+.imgFeature4{
+    width: 250px;
+    height: 250px;
+}
+.intructionUsage{
+    padding:6rem;
+    // margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color:#f0ffff;
+
+    .left-intructionUsageDiv{
+        width: 65%;
+        .videoIntructionUsage{
+            width: 700px
+        }
+    }
+    .right-intructionUsageDiv{
+        width: 35%;
+    }
+}

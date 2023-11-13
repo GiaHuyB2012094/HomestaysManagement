@@ -1,0 +1,117 @@
+h3{
+    color: #6439ff;
+}
+
+.inner{
+    display: flex;
+    // width: 780%;
+    position: relative;
+}
+.right{
+    // z-index: 10;
+    border-left: 1px solid #c1c1c1;
+    height: 706px;
+    width: 100%;
+}
+
+.container{
+    // background-color: rgb(230, 255, 247);
+    min-height: 500px;
+    width: 100%;
+    padding: 1.5rem;
+    .roomOptionsFilter{
+        justify-content: center;
+        align-items: center;
+        div{
+            display: flex;
+            align-items: center;
+            padding:0 1rem;
+            font-size: 18px;
+            label{
+                padding: 1rem;
+            }
+            input{
+                // height: 100px;
+                // font-size: 20px;
+                // width: 20px;
+            }
+        }
+    }
+    .nameBranchDiv{
+        // gap: 2.5rem;
+        &::after{
+            margin-top:1.3rem;
+            content: "";
+            width: 100%;
+            border: 1px solid #c1c1c1;
+            border-width: .1rem 0 0 0   ;
+            min-width: .1rem;
+            height:.1rem;
+            min-height: .1rem;
+        }
+        .nameBranch{
+            width: 160px;
+        }
+    }
+    .roomList{
+        margin:1rem 0;
+        gap: 2.5rem;
+        flex:1;
+        align-items: center;
+        flex-wrap: wrap;
+        .room{
+            background-color: #fff;
+            border: 1px solid #cfcfcf;
+            padding: 12px 16px;
+            // margin: 10px 0;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 8px;
+            width: 290px;
+            height: 140px;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid #696969;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+        }
+    }
+}
+.roomHeader{
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .roomStatus{
+        align-items: center;
+
+    }
+    .cleanOption,.notcleanOption{
+        padding:1rem;
+        border-radius:5px;
+        position:absolute;
+        right:0;
+        top:100%;
+        background-color:#fff;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor:pointer;
+        &:hover{
+            background-color:#f2f2f2;
+        }
+    }
+}
+.statusMenuIcon{
+    &:hover{
+        background-color: #d6d5d5;
+        border-radius: 50%;
+        padding:.2rem;
+    }
+}
+.formBranch{
+    padding: 5px;
+
+}
+
+
+
+.roomfooter{
+    font-size: 13px;
+}

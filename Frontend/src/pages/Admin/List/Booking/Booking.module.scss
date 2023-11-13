@@ -1,0 +1,75 @@
+h3{
+    color: #6439ff;
+}
+
+.inner{
+    display: flex;
+    // width: 780%;
+}
+.right{
+    // z-index: 10;
+    border-left: 1px solid #c1c1c1;
+    height: 706px;
+    width: 100%;
+}
+.btnUpdate{
+    margin-right:2rem;
+}
+.title{
+    align-items: center;
+    justify-content: space-between;
+    color: var(--sub);
+    padding: 2rem 0 0 2rem;
+}
+.tableDiv{
+    height: 500px;
+    overflow: auto;
+    width: 1260px;
+    margin-top: 1rem;
+    overflow-y: auto;
+}
+table{
+    // width: 700px;
+    // height:300px;
+    width: 1200px;
+    // min-width: 100px;
+    margin-left: 2rem;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th, td{
+    padding: 8px 16px;
+    text-align: left;
+}
+thead th{
+    // background-color: #08697f;
+    background-color: #6439ff;
+    color: white;
+    // min-width: 10px;
+    white-space: nowrap;
+    position: sticky;
+      top: 0;
+    text-transform: uppercase;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+tbody tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+.nameTH{
+    width: 160px;
+}
+.roomTH{
+    width: 300px;
+}
+.dateTH{
+    width: 135px;
+}
+.iconDelete{
+    font-size: 23px;
+    &:hover{
+        color: crimson;
+    }
+    cursor: pointer;
+}

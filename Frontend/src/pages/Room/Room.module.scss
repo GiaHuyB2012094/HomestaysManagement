@@ -1,0 +1,151 @@
+.wrapper {
+    background-color: rgb(241, 251, 251);
+    justify-content: center;
+    padding: 40px 170px;
+}
+.RoomListHorizontal {
+    width: 80%;
+}
+.inner {
+    padding:0 2rem;
+    color: var(--sub);
+    line-height: 4rem;
+    flex-direction: column;
+    width: 440px;
+    border-radius: 5px;
+    height: 530px;
+    .title {
+        text-align: center;
+        color: var(--sub);
+        text-transform: uppercase;
+    }
+    .branch-Input {
+        .input {
+            select {
+            padding-left: 1rem;
+            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+            }
+        }
+    }
+    .date-Input {
+        width:150px;
+        input{
+            width: 130px;
+            padding: 1rem;
+            
+            border: 1px solid #333;
+            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+
+        }
+    }
+    .options-Input {
+
+        .input {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1rem 0;
+
+            label {
+                width: 85%;
+            }
+            input {
+                padding: 0 0.7rem;
+                width: 25%;
+                border: 1px solid #d8d8d8;
+                border-radius: 3px;
+
+                &:focus {
+                    border: 1px solid var(--sub);
+                }
+            }
+        }
+    }
+    .quanlityBed-input{
+        // padding:
+        width: 300px;
+        label{
+            // width: 70%;
+            padding-right:2rem;
+        }
+        input{
+            padding: 0.3rem 0.5rem;
+            border: 1px solid #333;
+            width:15%;
+        }
+    }
+}
+.title,
+.branch-Input,
+.date-Input,
+.options-Input,
+.searchOptions {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+.input {
+    input,
+    select {
+        height: 30px;
+        width: 100%;
+    }
+}
+.search-Input{
+    // display: flex;
+    // align-items: center;
+    input{
+        width: 350px;
+        padding: 1rem;
+        border: 1px solid #828282;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+
+    }
+    // .icon{
+    //     margin-left: 1rem;
+    //     cursor: pointer;
+    //     font-size: 25px;
+    // }
+}
+.branch-Input{
+    width: 150px;
+}
+label{
+    font-weight: 500;
+}
+.clearFilter {
+    // margin-top: 3rem;
+    // padding: 8px 20px;
+    width: 47%;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-Input{
+    position: relative;
+    width: 70%;
+    padding-bottom: 4rem;
+    .range{
+        width: 100%;
+    }  
+}
+.bubble{
+    background:#0075ff;
+    font-size: 13px;
+    color: white;
+    padding: 0px 8px;
+    position: absolute;
+    border-radius: 4px;
+    top:  64px;
+    left: 50%;
+    transform: translateX(-50%);
+    &:after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 10px;
+        background: #0075ff;
+        top: -6px;
+        left: 50%;
+    }
+}  

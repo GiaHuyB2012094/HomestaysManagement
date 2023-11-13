@@ -1,0 +1,159 @@
+h3{
+    color: #6439ff;
+}
+
+.inner{
+    display: flex;
+    // width: 780%;
+    position: relative;
+}
+.right{
+    // z-index: 10;
+    border-left: 1px solid #c1c1c1;
+    height: 706px;
+    width: 100%;
+}
+.btnUpdate{
+    margin-right:2rem;
+}
+.title{
+    align-items: center;
+    justify-content: space-between;
+    color: var(--sub);
+    padding: 2rem 0 0 2rem;
+}
+
+.priceDiv{
+    padding: 10px;
+    margin: 1rem;
+    background-color: #ebebeb;
+    min-height: 50px;
+    justify-content: flex-end;
+    .priceGroup{
+        padding:0 3rem;
+    }
+}
+.priceGroup{
+   h3{
+    color:#ff4a1c;     
+    } 
+}
+.bodyDiv{
+    // background-color: #8a849f;
+    margin: 1rem;
+
+    .tableDiv{
+        width: 100%;
+       .table{
+            margin: 0;
+            width: 100%;
+            thead th{
+                background-color: #c5eefb;
+                color:#333;
+            }
+       }
+    }
+}
+.rowReceiptTable{
+    &:hover{
+        background-color: #ebf6fa;
+    }
+}
+.receipt1Div{
+    z-index: 100;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titleForm{
+    h3 {
+        margin-bottom: 1rem;
+    }
+}
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    margin-bottom: 8px;
+    // align-items: center;
+    z-index: 102;
+    background-color: rgb(255, 255, 255);
+    min-height: 400px;
+    width: 60%;
+    padding: 4rem 6rem;
+    position: relative;
+    border-radius: 10px;
+}
+.closeBtn{
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    // background-color: #f83d3d;
+    .icon{
+        // color:#f83d3d;
+        font-size: 20px;
+    }
+    &:hover{
+        color:#666666;
+    }
+}
+.iconDelete{
+    font-size: 23px;
+    &:hover{
+        color: crimson;
+    }
+    cursor: pointer;
+}
+.infoReceipt{
+    background-color: #c5eefb;
+    width: 100%;
+}
+.form {
+    // width: 1000px;
+    display: flex;
+    padding: 1rem;
+    margin-top: 2rem;
+    .leftForm{
+        width: 60%;
+    }
+    .rightForm{
+        margin-left:1rem;
+    }
+}
+.form-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    .form-label {
+        font-weight: 700;
+        line-height: 1.8rem;
+        font-size: 1.6rem;
+    }
+}
+
+.form-control-left{
+    height: 24px;
+    width: 350px;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.form-control-right{
+    height: 24px;
+    width: 350px;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.form-branch{
+    width: 140px;
+    border-radius: 4px;
+}

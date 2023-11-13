@@ -1,0 +1,118 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .inner {
+        padding: 30px 0px;
+    }
+    background-image: url('https://images.unsplash.com/photo-1584457173475-2996e0757ab8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGElMjBsYXR8ZW58MHx8MHx8fDA%3D&w=1000&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info-general {
+    text-align: center;
+    line-height: 30px;
+    padding: 20px 0px;
+    .phone {
+        margin: 0 auto;
+        border-radius: 10px 0 10px 0;
+        color: var(--white);
+        font-size: 19px;
+        font-weight: bold;
+        width: 200px;
+        padding: 10px 30px;
+        background-color: var(--primary);
+    }
+    .des,
+    .message {
+        color: #636d77;
+    }
+}
+.info-body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+.form {
+    width: 360px;
+    flex-direction: column;
+    min-height: 100px;
+    padding: 32px 32px;
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    border-radius: 2px;
+    align-self: center;
+
+    .desc {
+        text-align: center;
+        color: #636d77;
+        font-size: 1.6rem;
+        font-weight: lighter;
+        line-height: 2.4rem;
+        margin-top: 16px;
+        font-weight: 300;
+    }
+    .form-group {
+        display: flex;
+        margin-bottom: 16px;
+        flex-direction: column;
+        .form-control {
+            height: 40px;
+            padding: 8px 12px;
+            border: 1px solid #b3b3b3;
+            border-radius: 3px;
+            outline: none;
+            font-size: 1.4rem;
+            &:hover {
+                border-color: var(--sub);
+            }
+        }
+        .form-label {
+            font-weight: 700;
+            padding-bottom: 6px;
+            line-height: 1.8rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        .form-message {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            padding: 4px 0 0;
+        }
+        .form-label,
+        .form-message {
+            text-align: left;
+        }
+    }
+    .spacer {
+        margin-top: 36px;
+    }
+    .form-submit {
+        padding: 12px 16px;
+        text-transform: uppercase;
+        width: 150px;
+        box-shadow: none;
+    }
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-group {
+        width: 100%;
+    }
+}
+.form-row:nth-child(1) {
+    .form-group:nth-child(2) {
+        padding: 0px 20px;
+    }
+}
+.form-row:nth-child(2) {
+    .form-control {
+        height: 250px;
+    }
+}
