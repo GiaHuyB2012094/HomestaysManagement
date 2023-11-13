@@ -17,6 +17,7 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+// import ok from 
 // ---------------------------------------------------------------
 import { Link } from 'react-router-dom';
 
@@ -252,11 +253,12 @@ function Home() {
                         loop
                         muted
                         alt="Video intruction"
-                        src="http://localhost:3000/Video Homestay Usage Intruction.mp4"
+                        src="/VideoHomestayUsageIntruction.mp4"
                         ref={videoEl}
                     />         
+
                     </div>
-               </div>
+               </div>   
                <div className={cx("right-intructionUsageDiv")}>
                     <h5 
                         style={{color:"#0172a7"}}
