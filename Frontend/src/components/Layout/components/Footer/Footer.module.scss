@@ -1,0 +1,96 @@
+$bold: 700;
+.wrapper {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgb(132, 220, 255, 0.3);
+}
+.inner {
+    margin: 50px 0px;
+    color: #fff;
+    height: 70%;
+    width: 75%;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 216, 245, 0.2);
+    .content {
+        padding: 10px 20px;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        height: 90%;
+        .description {
+            font-weight: $bold;
+            width: 50%;
+            height: 100%;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 5px;
+            width: 50%;
+            .infoContact {
+                // font-weight: $bold;
+                padding-left: 10px;
+                .phone,
+                .address,
+                .time,
+                .price {
+                    padding-left: 20px;
+                }
+            }
+            .infoAbout {
+                // font-weight: $bold;
+                display: flex;
+                font-size: 18px;
+                padding-left: 5px;
+                justify-content: space-between;
+                // flex-direction: column;
+                color: var(--sub);
+                .infoAbout {
+                    &:hover {
+                        color: #333;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .copyRight {
+        background-color: var(--primary);
+        width: 100%;
+        font-weight: bold;
+        padding-top: 2px;
+        margin: 0 auto;
+        text-align: center;
+        height: 10%;
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+.description-content {
+    height: 100%;
+    font-weight: 300;
+    padding: 7px;
+    border-right: 2px solid var(--primary);
+}
+
+.bold {
+    font-weight: $bold;
+}
+.infoContact-content {
+    font-weight: 300;
+    padding-left: 20px;
+}
+.marquee {
+    background-color: var(--sub);
+    color: var(--white);
+
+    padding: 3px;
+}

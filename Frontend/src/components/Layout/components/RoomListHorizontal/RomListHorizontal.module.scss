@@ -1,0 +1,134 @@
+.wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cartSingleRoom {
+    height: 250px;
+    min-width: 300px;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+    margin: 0px 0px 40px 20px;
+    &:hover {
+        background: #daf0fa;
+        box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+        transition: 0.3s ease;
+    }
+    .avatarRoom {
+        // height: 100%;
+        width: 30%;
+        overflow: hidden;
+        // padding: 1rem;
+        .imgRoom {
+            object-fit: cover;
+            height: 100%;
+
+            width: 100%;
+            transition: 2s ease;
+            &:hover {
+                transition: scale(1.1);
+            }
+        }
+    }
+    .bodyRoom {
+        width: 48%;
+
+        height: 300px;
+        // padding: 1rem;
+        overflow: hidden;
+        .nameRoom {
+            overflow: hidden;
+            height:43px;
+            color: var(--sub);
+            text-transform: uppercase;
+            // font-size: 1.25rem;
+        }
+        .container {
+            align-items: center;
+            color: #858484;
+            font-size: 14px;
+            font-weight: 300;
+            padding-left: 1rem;
+            .branchRoom {
+            }
+        }
+
+        .descRoom {
+            height: 37px;
+            color: #5c5b5b;
+            font-weight: 400;
+            font-size: 13px;
+            padding-left: 1rem;
+
+            overflow: hidden;
+            white-space: pre-wrap;
+            text-overflow: ellipsis;
+        }
+        .acreageRoom {
+        }
+
+        .addressRoom {
+            color: #5c5b5b;
+            font-weight: 400;
+            padding-left: 1rem;
+            font-size: 14px;
+        }
+    }
+    .seeDetailDiv {
+        width: 22%;
+    }
+}
+.avatarRoom,
+.bodyRoom,
+.seeDetailDiv {
+    padding: 1rem;
+}
+
+.color-green {
+    color: #12ab12;
+}
+
+// .addressRoom,
+// .descRoom {
+//     padding-top: 1rem;
+// }
+// .priceRoom {
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     border-top: 1.5px solid #d3d3d3;
+//     border-bottom: 1.5px solid #d3d3d3;
+//     h4 {
+//         color: rgb(240, 87, 0);
+//     }
+// }
+.seeDetailDiv {
+    .rating {
+        height: 10%;
+        justify-content: flex-end;
+        // float: inline-end;
+        color: var(--sub);
+    }
+    .priceRoom {
+        height: 74%;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: rgb(240, 87, 0);
+        h3{
+            color: rgb(240, 87, 0);
+            
+        }
+        h5 {
+            color: #5c5b5b;
+            font-weight: 400;
+            padding-left: 1rem;
+        }
+    }
+    .btnRoom {
+        // margin-top:
+        height: 16%;
+        padding: 7px 0px;
+    }
+}

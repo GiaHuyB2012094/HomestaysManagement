@@ -1,0 +1,192 @@
+
+.inner{
+    display: flex;
+}
+.right{
+    // z-index: 10;
+    min-height: 706px;
+    border-left: 1px solid #c1c1c1;
+    width: 100%;
+}
+.btnUpdate{
+    margin-right:2rem;
+}
+.title{
+    align-items: center;
+    justify-content: space-between;
+    color: var(--sub);
+    padding: 2rem 0 0 2rem;
+}
+.tableDiv{
+    height: 500px;
+    overflow: auto;
+    width: 1260px;
+    margin-top: 1rem;
+    // padding: 0 2rem;
+    overflow-y: auto;
+}
+table{
+    width: 1200px;
+    margin-left: 2rem;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th, td{
+    padding: 8px 16px;
+    text-align: left;
+}
+thead th{
+    background-color: #6439ff;
+    color: white;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    text-transform: uppercase;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+tbody tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+.nameTH{
+    width: 160px;
+}
+.roomTH{
+    width: 300px;
+}
+.dateTH{
+    width: 120px;
+}
+.editBtnInfo,
+.saveBtnInfo,
+.cancelBtnInfo{
+    // margin-right:2rem;
+    padding: 10px;
+    &:hover{
+        box-shadow: 2px 0px 3px 0px rgba(182, 182, 183, 0.549);
+    }
+
+}
+.editBtnInfo,
+.saveBtnInfo{
+    margin-right:2rem;
+}
+.saveBtnInfo{
+    background-color: #7e82d9;
+    color: #fff;    
+    &:hover{
+        background-color: #7e83d9c4;
+    }
+}
+//////////////////////////////////////////////
+.body{
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form {
+    width: 1000px;
+    display: flex;
+    // justify-content: space-between;
+    padding: 1rem 0rem;
+    margin-top: 2rem;
+    .leftForm{
+        width: 60%;
+    }
+    .rightForm{
+        margin-left:1rem;
+        // width: 40%;
+    }
+}
+.form-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    .form-label {
+        font-weight: 700;
+        line-height: 1.8rem;
+        font-size: 1.6rem;
+    }
+}
+
+.form-control-left{
+    height: 40px;
+    width: 450px;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.form-control-right{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #b6b0b0;
+}
+.selectFormDiv{
+    .form-Input{
+        margin-right:2rem;
+    }
+}
+.numberFormDiv{
+    flex-wrap: wrap;
+    .form-group{
+        margin-right:2rem ;
+    }
+}
+.imgDiv{
+    // background-color: #7e82d9;
+    // border: 1px solid #333;
+    overflow: scroll;
+    height: 400px;
+}
+.imgInput{
+}
+.titleImg{
+    align-items: center;
+    justify-content: space-between;
+}
+.form-img1{
+    height: 40px;
+    width: 300px;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.form-img2{
+    margin-left: 1rem;
+    height: 40px;
+    width: 150px;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.btnADDImg{
+    background-color: #74BDE0;
+    padding: 8px 0 8px 14px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 4px;
+    margin-right: 2rem;
+    color: #fff;
+}
+.btnDELETEImg{
+    background-color: #E65C4F;
+    padding: 8px 0 8px 14px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 4px;
+    color: #fff;
+}
+.iconDelete{
+    font-size: 23px;
+    &:hover{
+        color: crimson;
+    }
+    cursor: pointer;
+}
+.iconEdit{
+    font-size: 23px;
+    &:hover{
+        color: green;
+    }
+    cursor: pointer;
+}

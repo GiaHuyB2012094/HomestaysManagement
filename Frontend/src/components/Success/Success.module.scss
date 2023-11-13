@@ -1,0 +1,43 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // position: absolute;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:7rem;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    position: absolute;
+    padding: 1rem 1.5rem;
+    // margin-bottom: 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    animation-name: ok;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    // border-left: 2px solid #c3e6cb;
+    animation: slideInTop ease-in-out 1s,fadeOut linear 3s forwards;
+    span{
+        padding-right: .6rem;
+    }
+} 
+@keyframes slideInTop{
+    from {
+        opacity: 0.6;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}

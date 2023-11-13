@@ -1,0 +1,116 @@
+.inner {
+    padding:0 2rem;
+    // background-color: antiquewhite;
+    color: var(--sub);
+    line-height: 4rem;
+    flex-direction: column;
+    width: 440px;
+    border-radius: 5px;
+    // justify-content: center;
+    height: 530px;
+    // box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+
+    .title {
+        text-align: center;
+        color: var(--sub);
+        text-transform: uppercase;
+    }
+    .branch-Input {
+        .input {
+            select {
+                // border: none;
+            }
+        }
+    }
+    .date-Input {
+    }
+    .options-Input {
+        .input {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1rem 0;
+            label {
+                width: 85%;
+            }
+            input {
+                padding: 0 0.7rem;
+                width: 25%;
+                border: 1px solid #d8d8d8;
+                border-radius: 3px;
+                &:focus {
+                    border: 1px solid var(--sub);
+                }
+            }
+        }
+    }
+    
+}
+.title,
+.branch-Input,
+.date-Input,
+.options-Input,
+.searchOptions {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+.input {
+    input,
+    select {
+        height: 30px;
+        width: 100%;
+    }
+}
+.search-Input{
+    
+    input{
+        width: 350px;
+        padding: 1rem;
+        border: 1px solid #828282;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+    }
+
+}
+.branch-Input{
+    width: 150px;
+}
+label{
+    font-weight: 500;
+}
+.clearFilter {
+    margin-top: 2rem;
+    padding: 8px 20px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-Input{
+    position: relative;
+    width: 70%;
+    padding-bottom: 4rem;
+    .range{
+        width: 100%;
+    }  
+}
+.bubble{
+    background:#0075ff;
+    font-size: 13px;
+    color: white;
+    padding: 0px 8px;
+    position: absolute;
+    border-radius: 4px;
+    top:  64px;
+    left: 50%;
+    transform: translateX(-50%);
+    &:after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 10px;
+        background: #0075ff;
+        top: -6px;
+        left: 50%;
+    }
+}  

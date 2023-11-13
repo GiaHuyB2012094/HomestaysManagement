@@ -1,0 +1,62 @@
+.roomHeader{
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .roomStatus{
+        align-items: center;
+
+    }
+    .cleanOption,.notcleanOption{
+        padding:1rem;
+        border-radius:5px;
+        position:absolute;
+        right:0;
+        top:100%;
+        background-color:#fff;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor:pointer;
+        &:hover{
+            background-color:#f2f2f2;
+        }
+    }
+}
+.statusMenuIcon{
+    &:hover{
+        background-color: #d6d5d5;
+        border-radius: 50%;
+        padding:.2rem;
+    }
+}
+
+
+
+
+.roomfooter{
+    font-size: 13px;
+}
+
+.room{
+    background-color: #d4efdf;
+    border: 1px solid #26ab5f;
+    padding: 16px;
+    // margin: 10px 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 8px;
+    width: 290px;
+    height: 150px;
+    cursor: pointer;
+    &:hover{
+        // border: 1px solid #696969;
+        box-shadow: #27ae618b 0px 5px 15px;
+    }
+}
+.name{
+    padding: .6rem;
+    border-radius: 8px;
+    color:#fff;
+    font-size: 13px;
+    background-color: #27ae61;
+}
+.roomBody{
+    margin-top: 1.5rem;
+}
