@@ -256,7 +256,6 @@ function Home() {
                         src="/VideoHomestayUsageIntruction.mp4"
                         ref={videoEl}
                     />         
-
                     </div>
                </div>   
                <div className={cx("right-intructionUsageDiv")}>
