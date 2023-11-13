@@ -1,11 +1,11 @@
 import classNames from 'classnames/bind';
 import styles from './RomListHorizontal.module.scss';
-import Image from '~/components/Image';
+import Image from 'src/components/Image';
 import { ImLocation2 } from 'react-icons/im';
 import { BsClipboardCheck } from 'react-icons/bs';
-import Button from '~/components/Button';
-import useFetch from '~/Hook/useFetch';
-import Loader from '~/components/Loader';
+import Button from 'src/components/Button';
+import useFetch from 'src/Hook/useFetch';
+import Loader from 'src/components/Loader';
 
 const cx = classNames.bind(styles);
 function RoomListHorizontal({ className, price, search, selected, fromdate, todate}) {

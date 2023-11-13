@@ -1,9 +1,9 @@
 import classNames from "classnames/bind";
 import styles from "./Profile.module.scss"
 import {BiEdit} from "react-icons/bi"
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import {MdModeEditOutline} from "react-icons/md"
-import Image from "~/components/Image";
+import Image from "src/components/Image";
 import { useEffect, useRef, useState } from "react";
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GoogleIcon from '@mui/icons-material/Google';

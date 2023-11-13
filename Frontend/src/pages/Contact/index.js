@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Contact.module.scss';
 import { BsPhoneFlip } from 'react-icons/bs';
-import Button from '~/components/Button';
+import Button from 'src/components/Button';
 const cx = classNames.bind(styles);
 function Contact() {
     return (

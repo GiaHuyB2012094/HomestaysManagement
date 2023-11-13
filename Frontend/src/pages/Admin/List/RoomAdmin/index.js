@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import style from './RoomAdmin.module.scss';
 
-import AddRoom from "~/components/componentOfAdmin/AddRoom/index.";
-import UpdateRoom from "~/components/componentOfAdmin/UpdateRoom/UpdateRoom";
-import Slidebar from "~/components/componentOfAdmin/Slidebar";
-import Header from "~/components/componentOfAdmin/Header";
-import Button from "~/components/Button";
-import useFetch from "~/Hook/useFetch";
-import Loader from "~/components/Loader";
-import UpdateRoomType from "~/components/componentOfAdmin/UpdateRoomType";
+import AddRoom from "src/components/componentOfAdmin/AddRoom/index.";
+import UpdateRoom from "src/components/componentOfAdmin/UpdateRoom/UpdateRoom";
+import Slidebar from "src/components/componentOfAdmin/Slidebar";
+import Header from "src/components/componentOfAdmin/Header";
+import Button from "src/components/Button";
+import useFetch from "src/Hook/useFetch";
+import Loader from "src/components/Loader";
+import UpdateRoomType from "src/components/componentOfAdmin/UpdateRoomType";
 import axios from "axios";
 import Swal from "sweetalert2";
 import {MdDelete,MdAdd} from "react-icons/md";
 import {GrAdd} from "react-icons/gr";
 import {BiSolidEditAlt} from 'react-icons/bi'
-import AddRoomType from "~/components/componentOfAdmin/AddRoomType";
+import AddRoomType from "src/components/componentOfAdmin/AddRoomType";
 // -------------------
 const cx = classNames.bind(style);
 function RoomAdmin() {

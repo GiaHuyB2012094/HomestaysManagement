@@ -1,9 +1,9 @@
-import RoomListHorizontal from '~/components/Layout/components/RoomListHorizontal';
-// import SearchVertical from '~/components/Layout/components/SearchVertical';
+import RoomListHorizontal from 'src/components/Layout/components/RoomListHorizontal';
+// import SearchVertical from 'src/components/Layout/components/SearchVertical';
 import classNames from 'classnames/bind';
 import styles from './Room.module.scss';
 import { useRef, useState } from 'react';
-import Button from '~/components/Button';
+import Button from 'src/components/Button';
 import { HiFilter } from 'react-icons/hi';
 // import { BiSearchAlt } from 'react-icons/bi'
 import dayjs from 'dayjs';

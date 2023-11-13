@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import moment from "moment";
 // material ui
 import { DemoContainer, DemoItem } from '@mui/x-date-pickers/internals/demo';
@@ -14,7 +14,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from "dayjs";
-import useFetch from "~/Hook/useFetch";
+import useFetch from "src/Hook/useFetch";
 import FormUserInfoBooking from "../FormUserInfoBooking";
 import CurrencyInput from "react-currency-input-field";
 const cx = classNames.bind(style);

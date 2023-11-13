@@ -1,11 +1,11 @@
 import classNames from "classnames/bind";
 import style from './Branch.module.scss';
 
-import Slidebar from "~/components/componentOfAdmin/Slidebar";
-import Header from "~/components/componentOfAdmin/Header";
-import Button from "~/components/Button";
-import useFetch from "~/Hook/useFetch";
-import Loader from "~/components/Loader";
+import Slidebar from "src/components/componentOfAdmin/Slidebar";
+import Header from "src/components/componentOfAdmin/Header";
+import Button from "src/components/Button";
+import useFetch from "src/Hook/useFetch";
+import Loader from "src/components/Loader";
 import { useForm } from 'react-hook-form';
 import {MdDelete} from 'react-icons/md';
 import axios from "axios";

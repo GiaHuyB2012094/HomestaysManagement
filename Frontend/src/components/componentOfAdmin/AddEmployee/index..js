@@ -4,7 +4,7 @@ import { useEffect,useState } from "react";
 import axios from "axios";
 import { useForm } from 'react-hook-form';
 
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import Swal from "sweetalert2";
 const cx = classNames.bind(style);
 

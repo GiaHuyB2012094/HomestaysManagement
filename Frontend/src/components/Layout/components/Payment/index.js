@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./Payment.module.scss";
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import moment from "moment/moment";
 import { useEffect, useState } from "react";
 // import axios from "axios";
@@ -9,7 +9,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-// import Image from "~/components/Image";
+// import Image from "src/components/Image";
 // import { useState,useMemo } from "react";
 const cx = classNames.bind(styles);
 function Payment({room, fromDate, toDate, totaldays, totalamount}) {

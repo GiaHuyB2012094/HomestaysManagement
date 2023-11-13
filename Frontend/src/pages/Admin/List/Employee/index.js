@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import style from './Employee.module.scss';
 
-import UpdateRoom from "~/components/componentOfAdmin/UpdateRoom/UpdateRoom";
-import Slidebar from "~/components/componentOfAdmin/Slidebar";
-import Header from "~/components/componentOfAdmin/Header";
-import Button from "~/components/Button";
-import useFetch from "~/Hook/useFetch";
-import Loader from "~/components/Loader";
+import UpdateRoom from "src/components/componentOfAdmin/UpdateRoom/UpdateRoom";
+import Slidebar from "src/components/componentOfAdmin/Slidebar";
+import Header from "src/components/componentOfAdmin/Header";
+import Button from "src/components/Button";
+import useFetch from "src/Hook/useFetch";
+import Loader from "src/components/Loader";
 import axios from "axios";
 import Swal from "sweetalert2";
 import {MdDelete} from "react-icons/md";
 import {BiSolidEditAlt} from 'react-icons/bi'
-import AddPositionOfEmployee from "~/components/componentOfAdmin/AddPositionOfEmployee/index.";
-import UpdatePositionOfEmployee from "~/components/componentOfAdmin/UpdatePositionOfEmployee";
-import AddEmployee from "~/components/componentOfAdmin/AddEmployee/index.";
-import UpdateEmployee from "~/components/componentOfAdmin/UpdateEmployee/index.";
+import AddPositionOfEmployee from "src/components/componentOfAdmin/AddPositionOfEmployee/index.";
+import UpdatePositionOfEmployee from "src/components/componentOfAdmin/UpdatePositionOfEmployee";
+import AddEmployee from "src/components/componentOfAdmin/AddEmployee/index.";
+import UpdateEmployee from "src/components/componentOfAdmin/UpdateEmployee/index.";
 // -------------------
 const cx = classNames.bind(style);
 function Employee() {

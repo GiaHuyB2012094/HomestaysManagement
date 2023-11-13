@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import moment from "moment";
 // material ui
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
@@ -13,7 +13,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from "dayjs";
-import useFetch from "~/Hook/useFetch";
+import useFetch from "src/Hook/useFetch";
 const cx = classNames.bind(style);
 function UpdateReceipt(props) {
   const [checked, setChecked] = useState(0);

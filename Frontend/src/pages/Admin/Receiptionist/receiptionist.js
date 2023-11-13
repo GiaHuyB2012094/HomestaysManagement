@@ -1,19 +1,19 @@
 import classNames from "classnames/bind";
 import style from  './receiptionist.module.scss';
-import Header from "~/components/componentOfAdmin/Header";
-import Slidebar from "~/components/componentOfAdmin/Slidebar";
-import useFetch from "~/Hook/useFetch";
+import Header from "src/components/componentOfAdmin/Header";
+import Slidebar from "src/components/componentOfAdmin/Slidebar";
+import useFetch from "src/Hook/useFetch";
 import { useEffect, useState } from "react";
-import Loader from "~/components/Loader";
+import Loader from "src/components/Loader";
 import {GiBroom} from 'react-icons/gi';
 import {RiDraggable} from 'react-icons/ri';
 import {IoSparklesSharp} from 'react-icons/io5';
 import axios from "axios";
 import { set } from "react-hook-form";
-import AddBooking from "~/components/componentOfAdmin/AddBooking/addBooking";
-import RoomBooking from "~/components/componentOfAdmin/RoomBooking/RoomBooking";
-import RoomBooked from "~/components/componentOfAdmin/RoomBooked/RoomBooked";
-import CheckoutRoomBooking from "~/components/componentOfAdmin/CheckoutRoomBooking/CheckoutRoomBooking";
+import AddBooking from "src/components/componentOfAdmin/AddBooking/addBooking";
+import RoomBooking from "src/components/componentOfAdmin/RoomBooking/RoomBooking";
+import RoomBooked from "src/components/componentOfAdmin/RoomBooked/RoomBooked";
+import CheckoutRoomBooking from "src/components/componentOfAdmin/CheckoutRoomBooking/CheckoutRoomBooking";
 import dayjs from "dayjs";
 const cx = classNames.bind(style);
 function Receiptionist() {

@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import style from './CheckoutRoomBooking.module.scss';
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import {AiOutlineClockCircle,AiOutlineDollarCircle,AiOutlineClose} from "react-icons/ai";
 import {HiOutlineUsers} from "react-icons/hi";
 import {BiBed,BiPencil,BiUser,BiPhoneCall} from "react-icons/bi";

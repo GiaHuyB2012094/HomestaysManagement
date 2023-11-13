@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoutes, privateRoutes } from '~/routes';
+import { publicRoutes, privateRoutes } from './routes';
 import { Fragment } from 'react';
-import { DefaultLayout } from '~/components/Layout';
+import { DefaultLayout } from './components/Layout';
 
 function App() {
     const user = JSON.parse(localStorage.getItem("currentUser"));

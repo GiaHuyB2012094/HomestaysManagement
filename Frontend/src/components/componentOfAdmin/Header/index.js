@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import style from './Header.module.scss';
-import Button from "~/components/Button";
-import Image from "~/components/Image";
+import Button from "src/components/Button";
+import Image from "src/components/Image";
 import {PiFlowerLotusFill} from 'react-icons/pi'
 import {AiFillDollarCircle} from 'react-icons/ai'
 import { DarkModeOutlined, LanguageOutlined } from "@mui/icons-material";

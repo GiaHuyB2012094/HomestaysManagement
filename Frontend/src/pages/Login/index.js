@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import classNames from 'classnames/bind';
 import styles from './Login.module.scss';
-import Button from '~/components/Button';
-import Loader from '~/components/Loader';
-import Error from '~/components/Error';
-import Success from '~/components/Success';
+import Button from 'src/components/Button';
+import Loader from 'src/components/Loader';
+import Error from 'src/components/Error';
+import Success from 'src/components/Success';
 const cx = classNames.bind(styles); //return function cx
 function Login() {
     const [email, setEmail] = useState('');

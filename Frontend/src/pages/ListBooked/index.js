@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
 import style from './ListBooked.module.scss'
-import Button from "~/components/Button";
-import Loader from "~/components/Loader";
-import useFetch from "~/Hook/useFetch";
+import Button from "src/components/Button";
+import Loader from "src/components/Loader";
+import useFetch from "src/Hook/useFetch";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";

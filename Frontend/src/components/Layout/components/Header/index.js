@@ -1,12 +1,12 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
-import Button from '~/components/Button';
+import Button from 'src/components/Button';
 import { FiLogOut,FiMenu } from 'react-icons/fi';
 import { MdOutlineListAlt } from 'react-icons/md';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { AiOutlineUser } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import Image from '~/components/Image';
+import Image from 'src/components/Image';
 // material
 import ButtonMenu from '@mui/material/Button';
 import Menu from '@mui/material/Menu';

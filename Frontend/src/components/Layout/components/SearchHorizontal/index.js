@@ -1,10 +1,10 @@
 import classNames from 'classnames/bind';
 import styles from './SearchHorizontal.module.scss';
-import Button from '~/components/Button';
+import Button from 'src/components/Button';
 import { HiFilter } from 'react-icons/hi';
 // import { useEffect } from 'react';
-import SingleInputDateRangePicker from '~/components/SingleInputDateRangePicker';
-import useFetch from '~/Hook/useFetch';
+import SingleInputDateRangePicker from 'src/components/SingleInputDateRangePicker';
+import useFetch from 'src/Hook/useFetch';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 

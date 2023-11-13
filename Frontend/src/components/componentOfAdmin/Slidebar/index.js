@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import style from './Slidebar.module.scss';
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import {BsHouseDoorFill, BsFillClipboard2CheckFill} from 'react-icons/bs'
 import {BiSolidUser ,BiSolidDashboard, BiSolidLogOut} from 'react-icons/bi'
 import {RiProfileFill} from 'react-icons/ri'

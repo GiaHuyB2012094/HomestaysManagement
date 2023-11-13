@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './RoomDetail.module.scss';
-import Image from '~/components/Image';
-import Button from '~/components/Button';
+import Image from 'src/components/Image';
+import Button from 'src/components/Button';
 import { ImLocation2 } from 'react-icons/im';
 import { BsCheckLg, BsImageFill } from 'react-icons/bs';
 import { useParams } from "react-router-dom";
 import { AiOutlineClose } from 'react-icons/ai';
-import useFetch from '~/Hook/useFetch';
-import Loader from '~/components/Loader';
-import FormBooking from '~/components/Layout/components/FormBooking';
+import useFetch from 'src/Hook/useFetch';
+import Loader from 'src/components/Loader';
+import FormBooking from 'src/components/Layout/components/FormBooking';
 import Swal from 'sweetalert2';
 const cx = classNames.bind(styles);
 

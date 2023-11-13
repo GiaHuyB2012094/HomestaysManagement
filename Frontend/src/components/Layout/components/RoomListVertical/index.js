@@ -1,14 +1,14 @@
 import classNames from 'classnames/bind';
 import styles from './RoomListVertical.module.scss';
-import Image from '~/components/Image';
+import Image from 'src/components/Image';
 import { ImLocation2 } from 'react-icons/im';
 import { BiMoneyWithdraw } from 'react-icons/bi';
 import { BsClipboardCheck } from 'react-icons/bs';
-import Button from '~/components/Button';
-import useFetch from '~/Hook/useFetch';
-import Loader from '~/components/Loader';
+import Button from 'src/components/Button';
+import useFetch from 'src/Hook/useFetch';
+import Loader from 'src/components/Loader';
 import { useEffect, useMemo, useState } from 'react';
-import Pagination from '~/components/Pagination/Pagination';
+import Pagination from 'src/components/Pagination/Pagination';
 
 
 

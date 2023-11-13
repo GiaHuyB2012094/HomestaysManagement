@@ -1,11 +1,11 @@
 import classNames from "classnames/bind";
 import style from './receipt.module.scss';
 
-import Slidebar from "~/components/componentOfAdmin/Slidebar";
-import Header from "~/components/componentOfAdmin/Header";
-import Button from "~/components/Button";
-import useFetch from "~/Hook/useFetch";
-import Loader from "~/components/Loader";
+import Slidebar from "src/components/componentOfAdmin/Slidebar";
+import Header from "src/components/componentOfAdmin/Header";
+import Button from "src/components/Button";
+import useFetch from "src/Hook/useFetch";
+import Loader from "src/components/Loader";
 import {MdDelete} from "react-icons/md";
 import {AiOutlinePlus,AiOutlineClose} from 'react-icons/ai';
 import { useEffect, useMemo, useState } from "react";
@@ -19,7 +19,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from "dayjs";
-import UpdateReceipt from "~/components/componentOfAdmin/UpdateReceipt/updateReceipt";
+import UpdateReceipt from "src/components/componentOfAdmin/UpdateReceipt/updateReceipt";
 const cx = classNames.bind(style);
 
 function Receipt() {

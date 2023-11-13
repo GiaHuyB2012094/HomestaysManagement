@@ -1,12 +1,12 @@
 import classNames from 'classnames/bind';
 import style from './Home.module.scss';
-import RoomListVertical from '~/components/Layout/components/RoomListVertical';
-import SearchHorizontal from '~/components/Layout/components/SearchHorizontal';
+import RoomListVertical from 'src/components/Layout/components/RoomListVertical';
+import SearchHorizontal from 'src/components/Layout/components/SearchHorizontal';
 import {BiSolidError} from 'react-icons/bi';
 import {AiOutlineHome} from 'react-icons/ai';
 import {HiOutlineClipboardDocumentList, HiOutlineNewspaper} from 'react-icons/hi2';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import Image from '~/components/Image';
+import Image from 'src/components/Image';
 import { Diversity2Outlined } from '@mui/icons-material';
 // material ui
 import Box from '@mui/material/Box';

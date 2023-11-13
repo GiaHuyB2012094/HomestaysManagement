@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./FormUserInfoBooking.module.scss";
-import Button from "~/components/Button";
+import Button from "src/components/Button";
 import {AiOutlineClose} from 'react-icons/ai'
 import { useForm } from "react-hook-form";
 const cx = classNames.bind(styles);

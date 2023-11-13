@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Register.module.scss';
 import axios from 'axios';
-import Button from '~/components/Button';
-import Success from '~/components/Success';
-import Error from '~/components/Error';
-import Loader from '~/components/Loader';
+import Button from 'src/components/Button';
+import Success from 'src/components/Success';
+import Error from 'src/components/Error';
+import Loader from 'src/components/Loader';
 const cx = classNames.bind(styles); //return function cx
 function Login() {
     const [name, setName] = useState('');

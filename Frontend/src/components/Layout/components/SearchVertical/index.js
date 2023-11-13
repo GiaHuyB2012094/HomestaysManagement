@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './SearchVertical.module.scss';
-import Button from '~/components/Button';
+import Button from 'src/components/Button';
 import { HiFilter } from 'react-icons/hi';
 import {  useEffect, useMemo, useRef, useState } from 'react';
 import dayjs from 'dayjs';

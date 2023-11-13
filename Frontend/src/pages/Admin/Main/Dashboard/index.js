@@ -1,15 +1,15 @@
 import classNames from "classnames/bind";
 import style from './Dashboard.module.scss';
 
-import Slidebar from "~/components/componentOfAdmin/Slidebar";
-import Header from "~/components/componentOfAdmin/Header";
-import Button from "~/components/Button";
-import useFetch from "~/Hook/useFetch";
-import Loader from "~/components/Loader";
-import Widget from "~/components/componentOfAdmin/Widget";
-import PieChartt from "~/components/componentOfAdmin/Chart/PieChartt";
-import ResponsiveContainerChart from "~/components/componentOfAdmin/Chart/ResponsiveContainerChart";
-import BarChartt from "~/components/componentOfAdmin/Chart/BarChartt";
+import Slidebar from "src/components/componentOfAdmin/Slidebar";
+import Header from "src/components/componentOfAdmin/Header";
+import Button from "src/components/Button";
+import useFetch from "src/Hook/useFetch";
+import Loader from "src/components/Loader";
+import Widget from "src/components/componentOfAdmin/Widget";
+import PieChartt from "src/components/componentOfAdmin/Chart/PieChartt";
+import ResponsiveContainerChart from "src/components/componentOfAdmin/Chart/ResponsiveContainerChart";
+import BarChartt from "src/components/componentOfAdmin/Chart/BarChartt";
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 const cx = classNames.bind(style);

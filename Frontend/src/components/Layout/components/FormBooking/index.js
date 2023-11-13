@@ -2,8 +2,8 @@ import { useState,useMemo } from "react";
 import classNames from "classnames/bind";
 import Payment from "../Payment";
 import styles from "./FormBooking.module.scss";
-import Button from "~/components/Button";
-import Image from "~/components/Image";
+import Button from "src/components/Button";
+import Image from "src/components/Image";
 import {AiOutlineClose} from "react-icons/ai"
 const cx = classNames.bind(styles);
 

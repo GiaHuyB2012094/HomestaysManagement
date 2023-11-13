@@ -1,29 +1,29 @@
 // user
-import Contact from '~/pages/Contact';
-import Home from '~/pages/Home';
-import Room from '~/pages/Room';
-import Service from '~/pages/Service';
-import News from '~/pages/News';
-import RoomDetail from '~/pages/RoomDetail';
-import Login from '~/pages/Login';
-import Register from '~/pages/Register'
-import Profile from '~/pages/Profile';
-import ListBooked from '~/pages/ListBooked';
+import Contact from 'src/pages/Contact';
+import Home from 'src/pages/Home';
+import Room from 'src/pages/Room';
+import Service from 'src/pages/Service';
+import News from 'src/pages/News';
+import RoomDetail from 'src/pages/RoomDetail';
+import Login from 'src/pages/Login';
+import Register from 'src/pages/Register'
+import Profile from 'src/pages/Profile';
+import ListBooked from 'src/pages/ListBooked';
 // admin
-// import Admin from '~/pages/Admin';
-import Booking from '~/pages/Admin/List/Booking';
-import User from '~/pages/Admin/List/User';
-import RoomAdmin from '~/pages/Admin/List/RoomAdmin'
-import Convenient from '~/pages/Admin/Sub/Convenient';
-import Nearbytouristspot from '~/pages/Admin/Sub/Nearbytouristspot';
-import Branch from '~/pages/Admin/Sub/Branch';
-import Employee from '~/pages/Admin/List/Employee';
-import Dashboard from '~/pages/Admin/Main/Dashboard';
-// import Receipt from '~/pages/Admin/Receipt';
-import Receipt from '~/pages/Admin/Receipt/receipt';
-import Receiptionist from '~/pages/Admin/Receiptionist/receiptionist';
+// import Admin from 'src/pages/Admin';
+import Booking from 'src/pages/Admin/List/Booking';
+import User from 'src/pages/Admin/List/User';
+import RoomAdmin from 'src/pages/Admin/List/RoomAdmin'
+import Convenient from 'src/pages/Admin/Sub/Convenient';
+import Nearbytouristspot from 'src/pages/Admin/Sub/Nearbytouristspot';
+import Branch from 'src/pages/Admin/Sub/Branch';
+import Employee from 'src/pages/Admin/List/Employee';
+import Dashboard from 'src/pages/Admin/Main/Dashboard';
+// import Receipt from 'src/pages/Admin/Receipt';
+import Receipt from 'src/pages/Admin/Receipt/receipt';
+import Receiptionist from 'src/pages/Admin/Receiptionist/receiptionist';
 // layout
-import { HeaderOnly} from '~/components/Layout';
+import { HeaderOnly} from 'src/components/Layout';
 
 export const publicRoutes = [
     { path: '/', component: Home },

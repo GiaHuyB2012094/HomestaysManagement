@@ -4,8 +4,8 @@ import { useEffect,useState } from "react";
 import axios from "axios";
 import { useForm } from 'react-hook-form';
 
-import Button from "~/components/Button";
-import useFetch from "~/Hook/useFetch";
+import Button from "src/components/Button";
+import useFetch from "src/Hook/useFetch";
 // material ui
 import Checkbox from '@mui/joy/Checkbox';
 import List from '@mui/joy/List';
