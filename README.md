@@ -62,9 +62,9 @@ Add room along with room type
 <!-- ![roomdetail](https://github.com/GiaHuyB2012094/HomestaysManagement/blob/main/asset/room%20detail.png) -->
 
 
-# Example Booking Process
+# Example Booking And Process
 User login in to the user interface after then find room and booking
-![booking](./asset/Booking.png)
-# Example Checkout Process
+![login](./asset/Login.png)
 user fill in all information on form and checkout room.
 ![checkoutrom](./asset/checkout.png)
+![payment](./asset/payment.png)
