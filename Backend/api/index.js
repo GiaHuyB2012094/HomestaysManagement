@@ -1,6 +1,7 @@
 const express = require("express");
 
 const app = express();
+const cors = require('cors');
 const dbConfig = require('../db')
 // const port = process.env.PORT || 5000;
 const port =  5000;
@@ -28,9 +29,17 @@ const createMongoose = require('../data/index');
     // createMongoose.createDataRoom();
 // --------------------------------
 // middleware
+app.use(cors(
+    {
+        origin: ["https://homestays-management-mern.vercel.app/"],
+        methods: ["POST","GET","DELETE","PUT"],
+        credentials: true
+    }
+))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
 // router running
 app.use("/api/rooms",roomsRoute);
 app.use("/api/users",usersRoute);
