@@ -31,7 +31,7 @@ const createMongoose = require('../data/index');
 // middleware
 app.use(cors(
     {
-        origin: ["https://homestays-management-mern.vercel.app/"],
+        origin: ["https://homestays-management-mern.vercel.app"],
         methods: ["POST","GET","DELETE","PUT"],
         credentials: true
     }
