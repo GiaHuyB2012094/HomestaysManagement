@@ -50,7 +50,7 @@ function User() {
                 <Header></Header> 
                 <div className={cx("title","flex")}> 
                   <h2>User</h2>
-                  <Button feature className={cx("btn","updateBtn")}>Cập nhật</Button>
+                  {/* <Button feature className={cx("btn","updateBtn")}>Cập nhật</Button> */}
                 </div>
                 {loading ? <Loader/> : (
                 <div className={cx("tableDiv")}>

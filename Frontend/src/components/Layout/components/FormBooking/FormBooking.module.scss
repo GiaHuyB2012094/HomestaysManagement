@@ -22,7 +22,7 @@
     z-index: 101;
     background-color: rgb(255, 255, 255);
     min-height: 500px;
-    width: 65%;
+    width: 75%;
     padding: 2rem;
 }
 
@@ -35,6 +35,7 @@
         height: 400px;
         .img{   
             height:390px;
+            width: 100%;
             // height: 60vh;
             overflow: hidden;
         }
@@ -45,36 +46,15 @@
     padding-right:4rem;
 }
 .right{
-
-    width: 30%;
-    
+    // width: 50%;
     .body{
-        height: 90%;
+        height: 85%;
+        padding-left:2rem;
         .titleForm{
         
         }
         line-height: 4rem;
-        .formDate{
     
-        }
-        .toDate{
-            
-        }
-        .maxCount{
-            
-        }
-        .titlePayment{
-            
-        }
-        .totalDate{
-            
-        }
-        .price{
-            
-        }
-        .totalAmount{
-            
-        }
     }
 }
 .text{
@@ -89,7 +69,7 @@ h3{
     color: var(--sub);
 }
 .btnPayment{
-    margin-left: 155px;
+    margin-bottom: 50px;
 }
 .closeBtn{
     height: 20px;

@@ -86,7 +86,12 @@ function AddRoom(props) {
           setImgval(deletaVal);
       }
       //  useForm
-      const {register, handleSubmit, reset, formState ,getValues } = useForm({
+      const {register, 
+        handleSubmit, 
+        reset, 
+        formState: { errors,isSubmitSuccessful },
+        getValues 
+      } = useForm({
         defaultValues:{
           name :"",
           address:"",
@@ -139,7 +144,7 @@ function AddRoom(props) {
         }
       };
       useEffect(()=>{
-        if (formState.isSubmitSuccessful) {
+        if (isSubmitSuccessful) {
           reset({
             name :"",
             address:"",
@@ -151,7 +156,7 @@ function AddRoom(props) {
           setValueConvenient([]);
           setImgval([{src:"",alt:""}]);
         }
-      },[formState,reset])
+      },[isSubmitSuccessful,reset])
 
     return (
         <>
@@ -187,12 +192,22 @@ function AddRoom(props) {
                       Tên Phòng
                   </label>
                   <input
-                      {...register("name", {required: true, value:""})} // react hook form
+                      {...register("name", {
+                        required: {
+                          value: true,
+                          message:"Vui lòng nhập đầy đủ tên phòng"
+                        },
+                        value:""})} // react hook form
                       id="name"
                       name="name"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
+                  <div className={cx("errorDiv")}>
+                      {errors.name && (
+                          <span className={cx("error")}>{errors.name.message}</span>
+                      )}
+                  </div>
               </div>
             {/* 2. address */}
               <div className={cx('form-group')}>
@@ -214,13 +229,22 @@ function AddRoom(props) {
                       Mô tả
                   </label>
                   <input
-                      {...register("desc",{required: true, value:""})}
+                      {...register("desc",{
+                        required: {
+                          value: true,
+                          message:"Trường mô tả không được trống"
+                        },
+                        value:""})}
                       id="desc"
                       name="desc"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
-                  <span className={cx('form-message')}></span>
+                  <div className={cx("errorDiv")}>
+                      {errors.desc && (
+                          <span className={cx("error")}>{errors.desc.message}</span>
+                      )}
+                  </div>
               </div> 
             {/* 4. convinent */}
               <Sheet  sx={{ width: "80%", marginBottom: 2}}>

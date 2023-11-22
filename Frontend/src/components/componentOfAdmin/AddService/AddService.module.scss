@@ -1,0 +1,97 @@
+
+.inner{
+    display: flex;
+}
+.right{
+    // z-index: 10;
+    min-height: 706px;
+    border-left: 1px solid #c1c1c1;
+    width: 100%;
+}
+.btnUpdate{
+    margin-right:2rem;
+}
+.title{
+    align-items: center;
+    justify-content: space-between;
+    color: var(--sub);
+    padding: 2rem 0 0 2rem;
+}
+
+.body{
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form {
+    width: 1000px;
+    display: flex;
+    // justify-content: space-between;
+    padding: 1rem 0rem;
+    margin-top: 2rem;
+    .leftForm{
+        width: 60%;
+    }
+    .rightForm{
+        margin-left:1rem;
+        // width: 40%;
+    }
+}
+.form-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    .form-label {
+        font-weight: 700;
+        line-height: 1.8rem;
+        font-size: 1.6rem;
+    }
+}
+
+.form-control-left{
+    height: 40px;
+    width: 450px;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.imgDiv{
+    // background-color: #7e82d9;
+    // border: 1px solid #333;
+    overflow: scroll;
+    height: 400px;
+}
+.imgInput{
+}
+.titleImg{
+    align-items: center;
+    justify-content: space-between;
+}
+.form-img1{
+    height: 40px;
+    width: 300px;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.form-img2{
+    margin-left: 1rem;
+    height: 40px;
+    width: 150px;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #b6b0b0;
+}
+.btnADDImg{
+    background-color: #74BDE0;
+    padding: 8px 0 8px 14px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 4px;
+    margin-right: 2rem;
+    color: #fff;
+}
+.btnDELETEImg{
+    background-color: #E65C4F;
+    padding: 8px 0 8px 14px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 4px;
+    color: #fff;
+}

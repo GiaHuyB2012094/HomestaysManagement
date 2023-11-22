@@ -225,7 +225,7 @@ function Receiptionist() {
                         {loading ? (<Loader/>) : (
                             roomsfiltered.map((room)=>{
                             return (
-                                (room.currentBooking.length>0) ? (
+                                (room.currentBooking.length>0 && room.currentBooking[0].status==="success") ? (
                                     <RoomBooked 
                                         room={room}
                                         seeBookingInfo={seeBookingInfoHandle}

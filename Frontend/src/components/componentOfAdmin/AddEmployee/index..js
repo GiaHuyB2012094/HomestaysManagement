@@ -42,7 +42,11 @@ function AddEmployee(props) {
         fecthData();
       },[])
       //  useForm
-      const {register, handleSubmit, reset, formState } = useForm({
+      const {register,
+        handleSubmit,
+        reset,
+        formState : {errors, isSubmitSuccessful} 
+        } = useForm({
         defaultValues:{
           name: "",
           address: "",
@@ -75,7 +79,7 @@ function AddEmployee(props) {
         }
       };
       useEffect(()=>{
-        if (formState.isSubmitSuccessful) {
+        if (isSubmitSuccessful) {
           reset({
             name: "",
             address: "",
@@ -86,7 +90,7 @@ function AddEmployee(props) {
             gender: "Male",
           })
         }
-      },[formState,reset])
+      },[isSubmitSuccessful,reset])
 
     return (
        
@@ -123,12 +127,22 @@ function AddEmployee(props) {
                       Tên nhân viên
                   </label>
                   <input
-                      {...register("name", {required: true, value:""})} // react hook form
+                      {...register("name", {
+                        required: {
+                          value: true,
+                          message:"Vui lòng nhập đầy đủ họ và tên của nhân viên"
+                        },
+                        value:""})} // react hook form
                       id="name"
                       name="name"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
+                  <div className={cx("errorDiv")}>
+                      {errors.name && (
+                          <span className={cx("error")}>{errors.name.message}</span>
+                      )}
+                  </div>
               </div>
               {/* 2. cmnd  */}
               <div  className={cx('form-group')}>
@@ -136,12 +150,22 @@ function AddEmployee(props) {
                       Số CMND
                   </label>
                   <input
-                      {...register("cmnd", {required: true, value:""})} // react hook form
+                      {...register("cmnd", {
+                        required: {
+                          value: true,
+                          message:"Vui lòng nhập đầy đủ số CMND của nhân viên"
+                        },
+                        value:""})} // react hook form
                       id="cmnd"
                       name="cmnd"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
+                  <div className={cx("errorDiv")}>
+                      {errors.cmnd && (
+                          <span className={cx("error")}>{errors.cmnd.message}</span>
+                      )}
+                  </div>
               </div>
               {/* 3. phone */}
               <div  className={cx('form-group')}>
@@ -149,12 +173,22 @@ function AddEmployee(props) {
                       Số điện thoại
                   </label>
                   <input
-                      {...register("phone", {required: true, value:""})} // react hook form
+                      {...register("phone", {
+                        required: {
+                          value: true,
+                          message:"Vui lòng nhập đầy đủ số điện thoại"
+                        },
+                        value:""})} // react hook form
                       id="phone"
                       name="phone"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
+                  <div className={cx("errorDiv")}>
+                      {errors.phone && (
+                          <span className={cx("error")}>{errors.phone.message}</span>
+                      )}
+                  </div>
               </div>
               {/* 4. address */}
               <div  className={cx('form-group')}>
@@ -162,12 +196,22 @@ function AddEmployee(props) {
                       Địa chỉ
                   </label>
                   <input
-                      {...register("address", {required: true, value:""})} // react hook form
+                      {...register("address", {
+                        required: {
+                          value: true,
+                          message:"Vui lòng nhập đầy đủ địa chỉ"
+                        },
+                        value:""})} // react hook form
                       id="address"
                       name="address"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
+                  <div className={cx("errorDiv")}>
+                      {errors.address && (
+                          <span className={cx("error")}>{errors.address.message}</span>
+                      )}
+                  </div>
               </div>
               </div>
               {/* RIGHT FORM ------------------------------------------------------------------------------------ */}
@@ -221,6 +265,11 @@ function AddEmployee(props) {
                         type="date"
                         className={cx('date-input')}
                     ></input>
+                    <div className={cx("errorDiv")}>
+                        {errors.dateofbirth && (
+                            <span className={cx("error")}>{errors.dateofbirth.message}</span>
+                        )}
+                    </div>
                 </div>
               {/* 4. gender */}
                 <div  className={cx('form-group')}>
@@ -243,7 +292,7 @@ function AddEmployee(props) {
                         Ghi chú
                     </label>
                     <input
-                        {...register("note", {required: true, value:""})} // react hook form
+                        {...register("note", {value:""})} // react hook form
                         id="note"
                         name="note"
                         type="text"

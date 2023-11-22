@@ -5,6 +5,7 @@ const Receipt = require("../models/receipt");
 const bookingController = {
     // create booking
     bookingRoom: async(req, res) => {
+        console.log("ooooooooooooooooooooooo");
         const {room,
             userid,
             fromdate,
@@ -16,9 +17,12 @@ const bookingController = {
             address,
             phone,
             cccd,
+            services,
             deposits,
             requests,
-            nameuserorder,} = req.body;
+            status,
+            nameuserorder} = req.body;
+        // console.log(req.body);
         try {
             // add currentBooking for room
             const roomtemp = await Room.findOne({_id: room._id});
@@ -53,11 +57,13 @@ const bookingController = {
                     nameuserorder,
                     address,
                     phone,
+                    services,
                     type,
                     deposits : deposits,
                     cccd,
                     transactionId: '1234',
                     requests,
+                    status: status || "booked",
                 })
                 const booking = await newbooking.save();
                 roomtemp.currentBooking.push({
@@ -77,39 +83,6 @@ const bookingController = {
             return res.status(400).json({message:error});
         }
     },
-
-// create receipt
-// createReceipt : async(req,res) =>{
-//     const {
-//         name,
-//         branch,
-//         nameEmployee,
-//         note,
-//         price,
-//         type,
-//         date,
-//         isPayment} = req.body;
-//     try {
-//         console.log("add receipt ")
-//         const newreceipt = new Receipt({
-//             name,
-//             branch,
-//             nameEmployee,
-//             note,
-//             price,
-//             type,
-//             date,
-//             isPayment,});
-        
-//         const receipt = await newreceipt.save();
-
-//         const receipts = await Receipt.find({});
-//         return res.json(receipts);
-//         } catch (error) {
-//             console.log(error);
-//         }
-//     },
-
     checkoutBooking: async(req, res) => {
         console.log("checkout booking")
         const {booking} = req.body;
@@ -167,7 +140,38 @@ const bookingController = {
             return res.status(400).json({message:error});
         }
     },
-    // Cancel booking
+   
+  
+    // Get all booking
+    getAllBooking : async(req, res) => {
+        try {
+            const bookings = await Booking.find({})      
+            return res.json(bookings);      
+        } catch (error) {
+            return res.status(400).json({message:error});
+        }
+    },
+    // delete room by id
+    deleteBooking: async(req, res) => {
+    console.log("delete booking");
+        try {
+            const bookingitem = await Booking.findOne({_id: req.params.id})
+            const room = await Room.findOne({_id: bookingitem.roomid}) //v
+            const bookingRoom = room.currentBooking
+            if (bookingRoom.length > 0){
+                let temp = [];
+                temp =  bookingRoom.filter(booking => booking.bookingid.toString()!==req.params.id)
+                room.currentBooking = temp
+                await room.save()  
+            }
+            const bookingdel = await Booking.findByIdAndDelete(req.params.id);
+            res.send("delete booking successfully");
+
+        } catch (error) {
+            return res.status(400).json({message:error});
+        }
+    },
+     // Cancel booking
     cancelBooking : async(req, res) => {
         const {bookingid, roomid} = req.body
         console.log(bookingid, roomid);
@@ -187,25 +191,31 @@ const bookingController = {
             return res.status(400).json({message:error});
         }
     },
-    // Get all booking
-    getAllBooking : async(req, res) => {
+    confirmBooking: async(req, res) => {
+        console.log("confirm booking")
         try {
-            const bookings = await Booking.find({})      
-            return res.json(bookings);      
+            const bookingitem = await Booking.findOne({_id: req.params.id})
+            bookingitem.status = "success";
+            await bookingitem.save()
+            const room = await Room.findOne({_id: bookingitem.roomid})
+            const bookingRoom = room.currentBooking
+            const temp = bookingRoom.map(booking => {
+                    if (booking.bookingid.toString()===req.params.id){
+                        booking.status = 'success'
+                    }
+                    return booking;
+                })
+            
+            room.currentBooking = temp
+            await room.save().then(()=>{console.log("luuuuuu thanh cong`")})
+            console.log(room);
+            const roomupdate = await Room.findByIdAndUpdate(room._id,
+                room,
+                {returnDocument: 'after'}) 
+            res.send("confirm booking successfully");
         } catch (error) {
             return res.status(400).json({message:error});
         }
-    },
-    // delete room by id
-    deleteBooking: async(req, res) => {
-    console.log("delete booking");
-    // console.log(req.params.id)
-    try {
-        const bookingdel = await Booking.findByIdAndDelete(req.params.id);
-        res.send("delete booking successfully");
-    } catch (error) {
-        return res.status(400).json({message:error});
     }
-    },
  }
 module.exports = bookingController;

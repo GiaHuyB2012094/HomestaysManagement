@@ -9,6 +9,7 @@ import { HiLocationMarker } from 'react-icons/hi'
 import {RiGitBranchFill} from 'react-icons/ri'
 import {PiUsersFourFill} from 'react-icons/pi'
 import { Link } from "react-router-dom";
+import { FaServicestack } from "react-icons/fa6";
 const cx = classNames.bind(style)
 function Slidebar() {
     const logoutHandle = () => {
@@ -55,6 +56,7 @@ function Slidebar() {
                                 Khách Hàng
                             </Button>
                         </div>
+                        
                         <div className={cx('listItem')}>
                             <Button 
                                 className={cx('btnDrawer')} 
@@ -73,6 +75,16 @@ function Slidebar() {
                                 to='/admin/list/room'
                                 >
                                 Phòng
+                            </Button>
+                        </div>
+                        <div className={cx('listItem')}>
+                            <Button 
+                                className={cx('btnDrawer')} 
+                                feature leftIcon={<FaServicestack className={cx('icon')}/>}
+                                // onClick={}    
+                                to='/admin/list/service'
+                            >
+                                Dịch vụ
                             </Button>
                         </div>
                         <div className={cx('listItem')}>

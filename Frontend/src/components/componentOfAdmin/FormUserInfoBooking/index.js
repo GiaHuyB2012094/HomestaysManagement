@@ -6,13 +6,17 @@ import { useForm } from "react-hook-form";
 const cx = classNames.bind(styles);
 function FormUserInfoBooking(props) {
     const user = JSON.parse(localStorage.getItem('currentUser'))
-    const {register, handleSubmit} = useForm({
-        defaultValues: {
-            nameuserorder: (user.name || ""),
-            address: (user.address || ""),
-            phone: (user.phone || ""),
-            cccd: (user.cccd || ""),
-        }
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        } = useForm({
+            defaultValues: {
+                nameuserorder: (user.name || ""),
+                address: (user.address || ""),
+                phone: (user.phone || ""),
+                cccd: (user.cccd || ""),
+            }
     })
     const onSubmit = async(data) => {
         props.userInfo(data);
@@ -49,13 +53,21 @@ function FormUserInfoBooking(props) {
                                         </label>
                                         <input
                                             {...register("nameuserorder",{ 
-                                                required: true})}
+                                                required: {
+                                                    value: true,
+                                                    message:"Vui lòng nhập đầy đủ họ và tên"
+                                                },})}
                                             id="nameuserorder"
                                             name="nameuserorder"
                                             type="text"
                                             placeholder="Nhập tên người đặt"
                                             className={cx('form-control')}
                                         ></input>
+                                        <div className={cx("errorDiv")}>
+                                            {errors.nameuserorder && (
+                                                <span className={cx("error")}>{errors.nameuserorder.message}</span>
+                                            )}
+                                        </div>
                                     </div>
                                     {/* Address */}
                                     <div className={cx('form-group')}>
@@ -64,13 +76,21 @@ function FormUserInfoBooking(props) {
                                         </label>
                                         <input
                                             {...register("address",{ 
-                                                required: true})}
+                                                required: {
+                                                    value: true,
+                                                    message:"Vui lòng nhập đầy đủ địa chỉ"
+                                                },})}
                                             id="address"
                                             name="address"
                                             type="text"
                                             placeholder="Nhập địa chỉ của người đặt"
                                             className={cx('form-control')}
                                         ></input>
+                                        <div className={cx("errorDiv")}>
+                                            {errors.address && (
+                                                <span className={cx("error")}>{errors.address.message}</span>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                                 {/* right */}
@@ -81,13 +101,23 @@ function FormUserInfoBooking(props) {
                                         </label>
                                         <input
                                             {...register("cccd",{
-                                                required: true,
-                                                valueAsNumber: true})}
+                                                required: {
+                                                    value: true,
+                                                    message:"Vui lòng nhập đầy đủ số CCCD"
+                                                },
+                                                valueAsNumber: {
+                                                    value: true,
+                                                },})}
                                             name="cccd"
                                             type="number"
                                             placeholder="Nhập Căn cước công dân"
                                             className={cx('form-control')}
                                         ></input>
+                                        <div className={cx("errorDiv")}>
+                                            {errors.cccd && (
+                                                <span className={cx("error")}>{errors.cccd.message}</span>
+                                            )}
+                                        </div>
                                     </div>
                                     {/* CCCD */}
                                     <div className={cx('form-group')}>
@@ -96,13 +126,23 @@ function FormUserInfoBooking(props) {
                                         </label>
                                         <input
                                             {...register("phone",{
-                                                required: true,
-                                                valueAsNumber: true,})}
+                                                required: {
+                                                    value: true,
+                                                    message:"Vui lòng nhập đầy đủ số điện thoại"
+                                                },
+                                                valueAsNumber: {
+                                                    value: true,
+                                                },})}
                                             name="phone"
                                             type="number"
                                             placeholder="Nhập số điện thoại"
                                             className={cx('form-control')}
                                         ></input>
+                                        <div className={cx("errorDiv")}>
+                                            {errors.phone && (
+                                                <span className={cx("error")}>{errors.phone.message}</span>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

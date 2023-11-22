@@ -17,6 +17,7 @@ import dayjs from "dayjs";
 import useFetch from "src/Hook/useFetch";
 import FormUserInfoBooking from "../FormUserInfoBooking";
 import CurrencyInput from "react-currency-input-field";
+import AddServiceBooking from "../AddServiceBooking";
 const cx = classNames.bind(style);
 function AddBooking(props) {
   const user = JSON.parse(localStorage.getItem('currentUser'))
@@ -24,6 +25,7 @@ function AddBooking(props) {
   const {data} = useFetch('/api/rooms/getallrooms');
 
   const [branch, setBranch] = useState([]);
+  const [service, setService] = useState([]);
   const [branchvalP, setBranchvalP] = useState(props.roomchoosed.branch);
   const [roomnumberP, setRoomnumberP] = useState(props.roomchoosed.number);
   const [rooms, setRooms] = useState([]);
@@ -33,8 +35,10 @@ function AddBooking(props) {
   const [deposits, setDeposits] = useState(0);
   const [roomboking, setRoombooking] = useState(props.roomchoosed);
   const [openUserInfoForm,setOpenUserInfoForm] = useState(false);
+  const [openAddServiceBooking,setOpenAddServiceBooking] = useState(false);
   const [typeBooking, setTypeBooking] = useState("day")
-
+  const [totalamountRoom, setTotalAmountRoom] = useState(0)
+  const [totalamountService, setTotalAmountService] = useState(0)
   const [userInfoVal, setUserInfoVal] = useState(""); 
   
   useEffect(()=>{
@@ -47,7 +51,19 @@ function AddBooking(props) {
   const [valueDateFromHour, setvalueDateFromHour] = useState(tt);
   const [valueDateTo, setValueDateTo] = useState(tt);
   const [valueDateToHour, setValueDateToHour] = useState(tt);
-//   get all branchs
+// //   get all branchs
+//   useEffect(()=>{
+//     const fetchDataService = async() => {
+//       try {
+//           const newservice = (await axios.get('/api/service/getallservices')).data;
+//           setService(newservice);
+//       } catch (error) {
+//         console.log(error);
+//       } 
+//     }
+//     fetchDataService();
+//   },[]);
+  //   get all services
   useEffect(()=>{
     const fetchDataBranch = async() => {
       try {
@@ -98,7 +114,9 @@ function AddBooking(props) {
     },[ typeBooking, valueDateFrom, valueDateTo, valueDateFromHour, valueDateToHour])
 
     const totalamount = useMemo(()=>{
-        var total=0;
+        let total=0;
+        let totalamountservice=0;
+
         if (typeBooking==='day') {
             total = totaldays*roomboking.price[1];
         } else if (typeBooking==='tonight'){
@@ -106,8 +124,14 @@ function AddBooking(props) {
         } else {
             total = totaldays*roomboking.price[0];
         }
+        setTotalAmountRoom(total)
+        if (service.length>0) {
+            service.forEach(serviceItem => totalamountservice+=serviceItem.totalamount)
+            total+=totalamountservice;
+        }
+        setTotalAmountService(totalamountservice);
         return total;
-    },[roomboking,typeBooking,totaldays])
+    },[roomboking,typeBooking,totaldays,service])
 
 // handle booking
     const bookingHandle = async() => {
@@ -118,6 +142,7 @@ function AddBooking(props) {
             todate: valueDateTo.format('MM-DD-YYYY'),
             orderdate: tt.format('MM-DD-YYYY'),
             totalamount: totalamount,
+            services: service,
             totaldays: totaldays,
             type: typeBooking,
             deposits: parseInt(deposits)||0,
@@ -126,6 +151,7 @@ function AddBooking(props) {
             phone: userInfoVal.phone||user.phone,
             cccd: userInfoVal.cccd||user.cccd,
             requests: requests,
+            status: "success",
         }
         try {
             const result =(await axios.post('/api/booking/bookroom',booking)).data;
@@ -171,17 +197,27 @@ function AddBooking(props) {
                 justifyContent:"space-between",
             }}
             >
-              <div className={cx("titleForm")} >
-                  <h3>Đặt/Nhận phòng nhanh</h3>
-              </div>
-              <Button 
-                      leftIcon={<AiOutlinePlus/>} 
-                      feature 
-                      className={cx("btn","updateBtn")}
-                      onClick={()=>setOpenUserInfoForm(true)}
-                >
-                      Nhập thông tin người đặt
-              </Button>
+                <div className={cx("titleForm")} >
+                    <h3>Đặt/Nhận phòng nhanh</h3>
+                </div>
+                <div className={cx("flex")}>
+                    <Button 
+                            leftIcon={<AiOutlinePlus/>} 
+                            feature 
+                            className={cx("btn","addBtn")}
+                            onClick={()=>setOpenAddServiceBooking(true)}
+                        >
+                            Thêm dịch vụ
+                    </Button>
+                    <Button 
+                            leftIcon={<AiOutlinePlus/>} 
+                            feature 
+                            className={cx("btn","updateBtn")}
+                            onClick={()=>setOpenUserInfoForm(true)}
+                        >
+                            Nhập thông tin người đặt
+                    </Button>
+                </div>
           </div>
           <form 
           key={1}
@@ -361,12 +397,35 @@ function AddBooking(props) {
                   </div>
                 {/* 2. Khach tra */} 
                  <div className={cx("form-payment")}>
+                     <div 
+                        className={cx("flex")}
+                        style={{
+                            justifyContent:"space-between",
+                            padding:"0 .7rem",
+                            width:"270px",
+                        }}
+                      >
+                        <h4 >Tiền phòng</h4>
+                        <h4 style={{color:"#f9a825"}}>{formatter.format(totalamountRoom)}</h4>
+                      </div>
                       <div 
                         className={cx("flex")}
                         style={{
                             justifyContent:"space-between",
                             padding:"0 .7rem",
                             width:"270px",
+                        }}
+                      >
+                        <h4 >Tiền các dịch vụ</h4>
+                        <h4 style={{color:"#f9a825"}}>{formatter.format(totalamountService)}</h4>
+                      </div>
+                      <div 
+                        className={cx("flex")}
+                        style={{
+                            justifyContent:"space-between",
+                            padding:"0 .7rem",
+                            width:"270px",
+                            borderTop:"1px solid #9e9e9e",
                         }}
                       >
                         <h4 >Khách cần trả</h4>
@@ -421,6 +480,13 @@ function AddBooking(props) {
             <FormUserInfoBooking
                 openUserInfoForm={(data)=>setOpenUserInfoForm(data)}
                 userInfo={(data)=>setUserInfoVal(data)}
+            />
+        )}
+        {(openAddServiceBooking) && (
+            <AddServiceBooking
+                openAddServiceBooking={(data)=>setOpenAddServiceBooking(data)}
+                // userInfo={(data)=>setUserInfoVal(data)}
+                listService={data=>setService(data)}
             />
         )}
      </div>

@@ -11,12 +11,16 @@ import Image from 'src/components/Image';
 import ButtonMenu from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { useRef, useState } from 'react';
+import Badge from '@mui/material/Badge';
 // ------
+import { useRef, useState } from 'react';
+import useFetch from 'src/Hook/useFetch';
 const cx = classNames.bind(styles); //return function cx
 function Header() {
     // const user = JSON.parse(localStorage.getItem('currentUser'))
-
+    const user = JSON.parse(localStorage.getItem('currentUser'))
+    
+    const {data,loading} = useFetch(`/api/booking/getbookingsbyuserid/${user ? user._id : 0}`)
     // dropdown menu
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -33,7 +37,6 @@ function Header() {
         window.location.href='/login';
     }
     // 
-    const user = JSON.parse(localStorage.getItem('currentUser'));
     // responsive
     const [showTab, setShowTab] = useState(false)
     const toggleTabItems = () => {
@@ -82,7 +85,15 @@ function Header() {
                                     onClick={handleClickUser}
                                 >
                                     {(user.avatar) ? (
-                                        <img src={`http://localhost:5000/Images/`+user.avatar} className={cx('user-avatar')} alt="img-avatar"></img>
+
+                                        <Badge
+                                            anchorOrigin={{
+                                                vertical: 'bottom',
+                                                horizontal: 'left',
+                                            }}
+                                            color="success" variant="dot">
+                                            <img src={`http://localhost:5000/Images/`+user.avatar} className={cx('user-avatar')} alt="img-avatar"></img>
+                                        </Badge>
                                     ): (
                                         <Image src="" className={cx('user-avatar')} alt="img-avatar" />
                                     )}
@@ -107,8 +118,36 @@ function Header() {
                                     </Link>
                                     <Link to='/ListBooked'>
                                     <MenuItem onClick={handleClose} className={cx('menuItem')}>
-                                        <MdOutlineListAlt className={cx('icon')}></MdOutlineListAlt>
-                                        <p>Danh sách phòng đã đặt</p>
+                                        {
+                                            data.length>0 ? (
+                                                <Badge badgeContent={data.length} color="warning">
+                                                    <div 
+                                                        className={cx("flex")}
+                                                        style={{
+                                                            justifyContent: "center",
+                                                            alignItems : "center",
+                                                            // padding: "1rem 0",
+                                                        }}
+                                                    >
+                                                        <MdOutlineListAlt className={cx('icon')}></MdOutlineListAlt>
+                                                        <p>Danh sách phòng đã đặt</p>
+                                                    </div>
+                                                </Badge>
+                                            ) : (
+                                                <div 
+                                                className={cx("flex")}
+                                                style={{
+                                                    justifyContent: "center",
+                                                    alignItems : "center",
+                                                    // padding: "1rem 0",
+                                                    }}
+                                                >
+                                                    <MdOutlineListAlt className={cx('icon')}></MdOutlineListAlt>
+                                                    <p>Danh sách phòng đã đặt</p>
+                                                </div>
+                                            )
+                                        }
+                                        
                                     </MenuItem>
                                     </Link>
                                     <MenuItem onClick={logoutHandle} className={cx('menuItem')}>

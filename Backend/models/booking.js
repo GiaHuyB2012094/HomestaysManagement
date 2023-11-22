@@ -69,6 +69,9 @@ const mongooseSchema = new Schema({
     requests:{
         type: String, 
         // require: true,
+    },
+    services:{
+        type: [Schema.Types.Mixed],
     }
 },{
     timestamps: true,

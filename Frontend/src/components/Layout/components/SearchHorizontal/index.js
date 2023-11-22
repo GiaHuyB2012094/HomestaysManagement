@@ -194,6 +194,47 @@ function SearchHorizontal(props) {
                     </Button>
                 </div>
             </div>
+            <div className={cx("descBranch")}>
+                <span className={cx("flex")}>
+                    <h4 
+                        style={{
+                            color:"#e8eaf6"
+                        }}    
+                    >Chi nhánh 1 :</h4>
+                    <h4
+                        style={{
+                            paddingLeft:"1.5rem",
+                            color:"#1a237e"
+                        }}
+                    >131 Hoang Hoa Tham, Phuong 10, Tp.Da Lat, Đà Lạt, Đà Lạt, Việt Nam</h4>
+                </span>
+                <span className={cx("flex")}>
+                    <h4 
+                        style={{
+                            color:"#e8eaf6"
+                        }}    
+                    >Chi nhánh 2 :</h4>
+                    <h4
+                        style={{
+                            paddingLeft:"1.5rem",
+                            color:"#1a237e"
+                        }}
+                    >53-55 BA THANG HAI, Trung tâm Đà Lạt, Đà Lạt, Việt Nam</h4>
+                </span>
+                <span className={cx("flex")}>
+                    <h4 
+                        style={{
+                            color:"#e8eaf6"
+                        }}    
+                    >Chi nhánh 3 :</h4>
+                    <h4
+                        style={{
+                            paddingLeft:"1.5rem",
+                            color:"#1a237e"
+                        }}
+                    >5-7A Tran Phu, w.3, Dalat, Lam Dong, Vietnam</h4>
+                </span>
+            </div>
         </div>
     );
 }

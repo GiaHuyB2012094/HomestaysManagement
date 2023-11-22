@@ -15,7 +15,11 @@ function AddPositionOfEmployee(props) {
         props.sendAllPositions(position);
     }    
       //  useForm
-      const {register, handleSubmit, reset, formState } = useForm({
+      const {register,
+        handleSubmit,
+        reset,
+        formState : {errors,isSubmitSuccessful}
+        } = useForm({
         defaultValues:{
           name :"",
           salary : 0,
@@ -36,13 +40,13 @@ function AddPositionOfEmployee(props) {
         }
       };
       useEffect(()=>{
-        if (formState.isSubmitSuccessful) {
+        if (isSubmitSuccessful) {
           reset({
             name :"",
             salary : 0,
           })
         }
-      },[formState,reset])
+      },[isSubmitSuccessful,reset])
 
     return (
       <>
@@ -78,12 +82,22 @@ function AddPositionOfEmployee(props) {
                       Tên chức vụ
                   </label>
                   <input
-                      {...register("name", {required: true, value:""})} // react hook form
+                      {...register("name", {
+                        required: {
+                          value: true,
+                          message:"Vui lòng nhập đầy đủ tên chức vụ, công việc"
+                        },
+                        value:""})} // react hook form
                       id="name"
                       name="name"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
+                  <div className={cx("errorDiv")}>
+                      {errors.name && (
+                          <span className={cx("error")}>{errors.name.message}</span>
+                      )}
+                  </div>
               </div>
               {/* 2. salary  */}
               <div  className={cx('form-group')}>
@@ -91,12 +105,26 @@ function AddPositionOfEmployee(props) {
                       Giá Lương
                   </label>
                   <input
-                      {...register("salary", {required: true,valueAsNumber: true, value:0})} // react hook form
+                      {...register("salary", {
+                        required: {
+                          value: true,
+                          message:"Vui lòng nhập đầy đủ giá lương"
+                        },
+                        valueAsNumber: {
+                          value: true,
+                          message:"Trường này bắt buộc là chữ số"
+                        },
+                        value:0})} // react hook form
                       id="salary"
                       name="salary"
                       type="text"
                       className={cx('form-control-left')}
                   ></input>
+                  <div className={cx("errorDiv")}>
+                      {errors.salary && (
+                          <span className={cx("error")}>{errors.salary.message}</span>
+                      )}
+                  </div>
               </div>
             </div>
           </form>

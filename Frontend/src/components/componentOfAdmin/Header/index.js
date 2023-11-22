@@ -3,6 +3,8 @@ import style from './Header.module.scss';
 import Button from "src/components/Button";
 import Image from "src/components/Image";
 import {PiFlowerLotusFill} from 'react-icons/pi'
+import Badge from '@mui/material/Badge';
+
 import {AiFillDollarCircle} from 'react-icons/ai'
 import { DarkModeOutlined, LanguageOutlined } from "@mui/icons-material";
 const cx = classNames.bind(style)
@@ -41,9 +43,23 @@ function Header() {
                         </div>
                         <div className={cx('item')}>
                             {(user.avatar) ? (
+                                <Badge
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                color="success" variant="dot">
                                 <img src={`http://localhost:5000/Images/`+user.avatar} className={cx('user-avatar')} alt="img-avatar"></img>
+                                 </Badge>
                             ): (
-                                <Image src="" className={cx('user-avatar')} alt="img-avatar" />
+                                <Badge
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                color="success" variant="dot">
+                                    <Image src="" className={cx('user-avatar')} alt="img-avatar" />
+                                </Badge>
                             )}
                             {user.name}
                         </div>

@@ -22,6 +22,7 @@ import Dashboard from 'src/pages/Admin/Main/Dashboard';
 // import Receipt from 'src/pages/Admin/Receipt';
 import Receipt from 'src/pages/Admin/Receipt/receipt';
 import Receiptionist from 'src/pages/Admin/Receiptionist/receiptionist';
+import ServiceAdmin from 'src/pages/Admin/List/Service';
 // layout
 import { HeaderOnly} from 'src/components/Layout';
 
@@ -43,6 +44,7 @@ export const privateRoutes = [
     { path: '/Admin/List/User', component: User},
     { path: '/Admin/List/Room', component: RoomAdmin},
     { path: '/Admin/List/Employee', component: Employee},
+    { path: '/Admin/List/Service', component: ServiceAdmin},
     { path: '/Admin/Sub/Convenient', component: Convenient},
     { path: '/Admin/Sub/Nearbytouristspot', component: Nearbytouristspot},
     { path: '/Admin/Sub/Branch', component: Branch},

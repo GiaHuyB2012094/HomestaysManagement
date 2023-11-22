@@ -16,6 +16,7 @@ const employeeRoute = require('./routes/employeeRoute');
 const roomtypeRoute = require('./routes/roomtypeRoute');
 const positionofemployeeRoute = require('./routes/positionofemployeeRoute');
 const receiptRoute = require('./routes/receiptRoute');
+const serviceRoute = require('./routes/serviceRoute');
 // --------------------------------
 
 // create Data 
@@ -37,6 +38,7 @@ app.use("/api/employees",employeeRoute);
 app.use("/api/roomtype",roomtypeRoute);
 app.use("/api/positionofemployee",positionofemployeeRoute);
 app.use("/api/receipt",receiptRoute);
+app.use("/api/service",serviceRoute);
 // ---------------------------------
 // server running
 app.listen(port, () => console.log('Node server started'));
